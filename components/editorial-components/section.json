@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_editorial_components_sections",
+  "info": {
+    "name": "Section",
+    "icon": "align-left"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "body": {
+      "type": "richtext"
+    },
+    "subSection": {
+      "type": "component",
+      "repeatable": true,
+      "component": "editorial-components.sub-section"
+    }
+  }
+}

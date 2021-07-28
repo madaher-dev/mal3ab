@@ -1,0 +1,72 @@
+{
+  "kind": "collectionType",
+  "collectionName": "chapters",
+  "info": {
+    "name": "Chapter",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
+    },
+    "introduction": {
+      "type": "richtext",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "Content": {
+      "type": "dynamiczone",
+      "components": [
+        "editorial-components.section"
+      ],
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "questions": {
+      "via": "chapter",
+      "collection": "question"
+    },
+    "nextChapter": {
+      "model": "chapter",
+      "via": "chapter"
+    },
+    "chapter": {
+      "model": "chapter",
+      "via": "nextChapter"
+    },
+    "finishers": {
+      "via": "chapter",
+      "plugin": "users-permissions",
+      "collection": "user"
+    },
+    "discussion": {
+      "via": "chapter",
+      "model": "discussion"
+    }
+  }
+}

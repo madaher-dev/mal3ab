@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "replies",
+  "info": {
+    "name": "Reply"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "body": {
+      "type": "string"
+    },
+    "author": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "comment": {
+      "via": "replies",
+      "model": "comment"
+    },
+    "isSpam": {
+      "type": "boolean"
+    }
+  }
+}

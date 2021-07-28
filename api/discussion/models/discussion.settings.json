@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "discussions",
+  "info": {
+    "name": "Discussion"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "chapter": {
+      "model": "chapter",
+      "via": "discussion"
+    },
+    "comments": {
+      "via": "discussion",
+      "collection": "comment"
+    }
+  }
+}

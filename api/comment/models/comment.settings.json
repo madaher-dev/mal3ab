@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "comments",
+  "info": {
+    "name": "Comment",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "body": {
+      "type": "string"
+    },
+    "author": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "comments"
+    },
+    "discussion": {
+      "model": "discussion",
+      "via": "comments"
+    },
+    "isSpam": {
+      "type": "boolean"
+    },
+    "replies": {
+      "via": "comment",
+      "collection": "reply"
+    }
+  }
+}

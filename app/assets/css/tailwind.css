@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    /* This is associated with font-extralight class */
+    font-family: Plex;
+    font-weight: 200;
+    src: url('~assets/plex/IBMPlexSansArabic-ExtraLight.woff') format('woff');
+  }
+
+  @font-face {
+    /* This is associated with font-light class */
+    font-family: Plex;
+    font-weight: 300;
+    src: url('~assets/plex/IBMPlexSansArabic-Light.woff') format('woff');
+  }
+
+  @font-face {
+    /* This is associated with font-regular class, which is not needed as it's default */
+    font-family: Plex;
+    font-weight: 400;
+    src: url('~assets/plex/IBMPlexSansArabic-Regular.woff') format('woff');
+  }
+
+  @font-face {
+    /* This is associated with font-medium class */
+    font-family: Plex;
+    font-weight: 500;
+    src: url('~assets/plex/IBMPlexSansArabic-Medium.woff') format('woff');
+  }
+
+  @font-face {
+    /* This is associated with font-semibold class */
+    font-family: Plex;
+    font-weight: 600;
+    src: url('~assets/plex/IBMPlexSansArabic-SemiBold.woff') format('woff');
+  }
+
+  @font-face {
+    /* This is associated with font-bold class */
+    font-family: Plex;
+    font-weight: 700;
+    src: url('~assets/plex/IBMPlexSansArabic-Bold.woff') format('woff');
+  }
+}

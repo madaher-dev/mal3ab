@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_editorial_components_sub_sections",
+  "info": {
+    "name": "subSection",
+    "icon": "align-right"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "body": {
+      "type": "richtext"
+    }
+  }
+}
